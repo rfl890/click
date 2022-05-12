@@ -1,8 +1,9 @@
 self.addEventListener('install', (e) => {
     e.waitUntil(
-        caches.open('offline').then((cache) => {
+        caches.open('offlineAccess').then((cache) => {
             return cache.addAll([
-                '/'
+                '/',
+                '/favicon.ico'
             ]);
         })
     );
